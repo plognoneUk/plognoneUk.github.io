@@ -256,16 +256,20 @@ footer {
   font-size: 1.1rem;
 }
 
+
 /* Resume Sections */
 .resume-section {
   margin-bottom: 60px;
 }
 
 .resume-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Bigger */
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left; /* Align left */
   color: #6a11cb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 
