@@ -171,6 +171,24 @@ main {
   border-left: 6px solid #9b59b6;
 }
 
+/* Hidden details */
+.details {
+  display: none;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Title style */
+.item-title {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+
 /* Footer */
 footer {
   text-align: center;
