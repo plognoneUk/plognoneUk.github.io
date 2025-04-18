@@ -109,10 +109,23 @@ h1, h2, h3 {
   background: #ffffff;
   padding: 20px;
   border: 1px solid #ccc;
-  border-left: 6px solid #2575fc;
+  border-left: 6px solid #ccc; /* will be overwritten by category */
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s;
+}
+
+/* Specific border colors for each type */
+.resume-item.education {
+  border-left: 6px solid #3498db;
+}
+
+.resume-item.journal {
+  border-left: 6px solid #2ecc71;
+}
+
+.resume-item.conference {
+  border-left: 6px solid #9b59b6;
 }
 
 .resume-item:hover {
