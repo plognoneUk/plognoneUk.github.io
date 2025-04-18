@@ -93,3 +93,58 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+
+.timeline {
+  border-left: 3px solid #2575fc;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: " ";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #2575fc;
+  border-radius: 50%;
+}
+
+.badge {
+  display: inline-block;
+  background: #2575fc;
+  color: white;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.badge.education { background: #6a11cb; }
+.badge.journal { background: #00b894; }
+.badge.conference { background: #e17055; }
+
+.details {
+  display: none;
+  background: #f0f8ff;
+  padding: 10px 15px;
+  border-left: 4px solid #2575fc;
+  margin-top: 10px;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
