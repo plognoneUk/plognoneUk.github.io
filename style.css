@@ -43,7 +43,7 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  height: 50vh;
   background: linear-gradient(to right, #2575fc, #6a11cb);
   color: white;
   display: flex;
