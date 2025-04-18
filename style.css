@@ -38,12 +38,12 @@ section {
 }
 
 h1, h2, h3 {
-  color: #2575fc;
+  color: #003666;
 }
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  height: 50vh;
   background: linear-gradient(to right, #2575fc, #6a11cb);
   color: white;
   display: flex;
@@ -69,7 +69,7 @@ h1, h2, h3 {
 
 .hero .button {
   background: white;
-  color: #2575fc;
+  color: #003666;
   padding: 12px 24px;
   font-size: 1.1rem;
   border-radius: 25px;
