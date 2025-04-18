@@ -262,15 +262,29 @@ footer {
   margin-bottom: 60px;
 }
 
+/* General for Section Headers */
 .resume-section h2 {
-  font-size: 2.5rem; /* Bigger */
+  font-size: 2.5rem;
   margin-bottom: 30px;
-  text-align: left; /* Align left */
-  color: #6a11cb;
+  text-align: left;
   display: flex;
   align-items: left;
   gap: 10px;
 }
+
+/* Specific colors */
+#education-section h2 {
+  color: #3498db; /* Blue for Education */
+}
+
+#publications-section h2 {
+  color: #2ecc71; /* Green for Publications */
+}
+
+#conferences-section h2 {
+  color: #9b59b6; /* Purple for Conferences */
+}
+
 
 
 
