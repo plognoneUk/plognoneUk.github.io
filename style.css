@@ -134,15 +134,7 @@ footer {
 .badge.conference { background: #e17055; }
 
 /* Expandable details */
-.details {
-  overflow: hidden;
-  max-height: 0;
-  background: #f0f8ff;
-  padding: 0 15px;
-  border-left: 4px solid #2575fc;
-  margin-top: 10px;
-  transition: max-height 0.5s ease;
-}
+
 
 /* Clickable paper titles */
 .clickable {
@@ -174,5 +166,38 @@ footer {
 .filters button:hover {
   background: #6a11cb;
 }
+
+/* Resume cards */
+.resume-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.resume-item {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-left: 6px solid #2575fc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.resume-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Expandable details (still animated) */
+.details {
+  overflow: hidden;
+  max-height: 0;
+  background: #f0f8ff;
+  padding: 0 15px;
+  margin-top: 10px;
+  transition: max-height 0.5s ease;
+}
+
+/* Other previous styles for badges, clickable, filters stay the same */
 
 
