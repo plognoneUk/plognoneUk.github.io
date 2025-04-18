@@ -268,7 +268,7 @@ footer {
   text-align: left; /* Align left */
   color: #6a11cb;
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 10px;
 }
 
