@@ -200,4 +200,60 @@ footer {
 
 /* Other previous styles for badges, clickable, filters stay the same */
 
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero .button {
+  background: white;
+  color: #2575fc;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .button:hover {
+  background: #f0f0f0;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+}
+
 
