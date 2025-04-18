@@ -1,127 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resume | Perrine Lognone</title>
-  <link href="style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perrine Lognone - Resume</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="resume.html">Resume</a>
-  <a href="research.html">Research</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <main>
+    <section class="filters">
+      <button onclick="filterSelection('all')">All</button>
+      <button class="education-btn" onclick="filterSelection('education')">Education</button>
+      <button class="journal-btn" onclick="filterSelection('journal')">Publications</button>
+      <button class="conference-btn" onclick="filterSelection('conference')">Conferences</button>
+    </section>
 
-<section>
-  <h1>My Resume</h1>
-
-  <div class="filters">
-    <button onclick="filterSelection('all')">All</button>
-    <button onclick="filterSelection('education')">Education</button>
-    <button onclick="filterSelection('journal')">Publications</button>
-    <button onclick="filterSelection('conference')">Conferences</button>
-  </div>
-
-  <!-- Education Section -->
-  <div class="resume-section" id="education-section">
-    <h2>🎓 Education</h2>
-
-    <div class="resume-cards">
-
+    <section class="resume-section" id="education-section">
+      <h2>🎓 Education</h2>
       <div class="resume-item education">
-        <span class="badge education">🎓 PhD</span>
-        <h3>PhD in Optical Communications – [Your University] (202X)</h3>
-        <p>Focus on satellite optical links, adaptive optics, and turbulence mitigation.</p>
+        <h3>Ph.D. in Satellite Optical Communications</h3>
+        <p>University of Example - 2020-2024</p>
       </div>
-
       <div class="resume-item education">
-        <span class="badge education">🎓 Master</span>
-        <h3>Master's Degree in [Your Program] – [Your University] (202X)</h3>
-        <p>Specialization in telecommunications and photonics systems.</p>
+        <h3>Master in Optical Engineering</h3>
+        <p>University of Example - 2018-2020</p>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-  <!-- Publications Section -->
-  <div class="resume-section" id="publications-section">
-    <h2>📄 Publications</h2>
-
-    <div class="resume-cards">
-
+    <section class="resume-section" id="publications-section">
+      <h2>📄 Publications</h2>
       <div class="resume-item journal">
-        <span class="badge journal">📄 Journal</span>
-        <h3 class="clickable" onclick="toggleDetails('paper1')">"[Title of Paper 1]" – [Journal Name] (202X)</h3>
-        <div id="paper1" class="details">
-          <p>This paper addresses [short description of topic].</p>
-          <a href="link-to-paper-1.pdf" target="_blank">Read the paper ➔</a>
-        </div>
+        <h3>Article Title 1</h3>
+        <p>Journal Name, 2023 - <a href="#">Learn more</a></p>
       </div>
-
       <div class="resume-item journal">
-        <span class="badge journal">📄 Journal</span>
-        <h3 class="clickable" onclick="toggleDetails('paper2')">"[Title of Paper 2]" – [Journal Name] (202X)</h3>
-        <div id="paper2" class="details">
-          <p>This work investigates [short description of second topic].</p>
-          <a href="link-to-paper-2.pdf" target="_blank">Read the paper ➔</a>
-        </div>
+        <h3>Article Title 2</h3>
+        <p>Journal Name, 2022 - <a href="#">Learn more</a></p>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-  <!-- Conferences Section -->
-  <div class="resume-section" id="conferences-section">
-    <h2>🎤 Conferences</h2>
-
-    <div class="resume-cards">
-
+    <section class="resume-section" id="conferences-section">
+      <h2>🎤 Conferences</h2>
       <div class="resume-item conference">
-        <span class="badge conference">🎤 Conference</span>
-        <h3>[Conference Name] – Presented "[Talk Title]" (202X)</h3>
-        <p>Topic: [short description about the talk].</p>
+        <h3>Conference Talk 1</h3>
+        <p>Conference Name, 2023 - <a href="#">Details</a></p>
       </div>
+      <div class="resume-item conference">
+        <h3>Conference Talk 2</h3>
+        <p>Conference Name, 2022 - <a href="#">Details</a></p>
+      </div>
+    </section>
+  </main>
 
-    </div>
-  </div>
+  <footer>
+    <p>&copy; 2025 Perrine Lognone</p>
+  </footer>
 
-  <h2>Download Full Resume</h2>
-  <a href="your-resume-link.pdf" class="button" download>Download Resume</a>
-
-</section>
-
-<footer>
-  © 2025 Perrine Lognone
-</footer>
-
-<script>
-function toggleDetails(id) {
-  var details = document.getElementById(id);
-  if (details.style.maxHeight) {
-    details.style.maxHeight = null;
-  } else {
-    details.style.maxHeight = details.scrollHeight + "px";
-  }
-}
-
-function filterSelection(category) {
-  var items = document.getElementsByClassName('resume-item');
-  for (var i = 0; i < items.length; i++) {
-    if (category === 'all') {
-      items[i].style.display = "block";
-    } else {
-      if (items[i].classList.contains(category)) {
-        items[i].style.display = "block";
-      } else {
-        items[i].style.display = "none";
+  <script>
+    function filterSelection(category) {
+      var items = document.getElementsByClassName("resume-item");
+      if (category === "all") category = "";
+      for (var i = 0; i < items.length; i++) {
+        items[i].style.display = items[i].className.indexOf(category) > -1 ? "block" : "none";
       }
     }
-  }
-}
-</script>
-
+  </script>
 </body>
+
 </html>
