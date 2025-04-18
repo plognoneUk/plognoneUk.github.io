@@ -1,190 +1,126 @@
+/* General styles */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
-}
-
-nav {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  padding: 10px 20px;
-  text-align: right;
-}
-
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  font-family: 'Arial', sans-serif;
+  background: #f7f7f7;
+  color: #333;
 }
 
 header {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 20px 0;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background: white;
-  color: #2575fc;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background 0.3s;
-}
-
-.button:hover {
-  background: #e0e0e0;
-}
-
-section {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-section h1, section h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-section p {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-}
-
-.list {
+nav ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
   padding: 0;
-  font-size: 1.1rem;
-  color: #555;
-  margin-top: 20px;
+  margin: 0;
 }
 
-.list li {
-  margin-bottom: 10px;
-  text-align: center;
+nav ul li {
+  margin: 0 15px;
 }
 
-footer {
-  text-align: center;
-  padding: 30px 10px;
-  background: #f5f5f5;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* Timeline */
-.timeline {
-  border-left: 3px solid #2575fc;
-  padding-left: 20px;
-  margin-top: 40px;
-}
-
-.timeline-item {
-  margin-bottom: 30px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.timeline-item::before {
-  content: " ";
-  position: absolute;
-  left: -10px;
-  top: 5px;
-  width: 15px;
-  height: 15px;
-  background: #2575fc;
-  border-radius: 50%;
-}
-
-/* Badges */
-.badge {
-  display: inline-block;
-  background: #2575fc;
+nav ul li a {
   color: white;
-  font-size: 0.75rem;
-  padding: 5px 10px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
-
-.badge.education { background: #6a11cb; }
-.badge.journal { background: #00b894; }
-.badge.conference { background: #e17055; }
-
-/* Expandable details */
-
-
-/* Clickable paper titles */
-.clickable {
-  cursor: pointer;
-  color: #2575fc;
+  text-decoration: none;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
-.clickable:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Filter buttons */
+main {
+  padding: 40px;
+}
+
+/* Filters section */
 .filters {
-  margin-bottom: 20px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .filters button {
-  background: #2575fc;
-  color: white;
-  border: none;
+  padding: 10px 20px;
   margin: 5px;
-  padding: 8px 15px;
+  font-size: 1rem;
+  border: none;
   border-radius: 20px;
   cursor: pointer;
-  transition: background 0.3s;
+  background: #ddd;
+  color: #333;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .filters button:hover {
-  background: #6a11cb;
+  transform: scale(1.05);
 }
 
-/* Resume cards */
-.resume-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+/* Specific button colors */
+.filters button.education-btn {
+  background: #3498db;
+  color: #fff;
 }
 
+.filters button.journal-btn {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.filters button.conference-btn {
+  background: #9b59b6;
+  color: #fff;
+}
+
+/* Resume Sections */
+.resume-section {
+  margin-bottom: 60px;
+}
+
+/* General header style */
+.resume-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Specific header colors */
+#education-section h2 {
+  color: #3498db;
+}
+
+#publications-section h2 {
+  color: #2ecc71;
+}
+
+#conferences-section h2 {
+  color: #9b59b6;
+}
+
+/* Resume item cards */
 .resume-item {
   background: #ffffff;
   padding: 20px;
   border: 1px solid #ccc;
-  border-left: 6px solid #ccc; /* will be overwritten by category */
+  border-left: 6px solid #ccc;
   border-radius: 10px;
+  margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
-/* Specific border colors for each type */
+.resume-item:hover {
+  transform: scale(1.02);
+}
+
+/* Specific card left border colors */
 .resume-item.education {
   border-left: 6px solid #3498db;
 }
@@ -197,107 +133,11 @@ footer {
   border-left: 6px solid #9b59b6;
 }
 
-.resume-item:hover {
-  transform: translateY(-5px);
-}
-
-/* Expandable details (still animated) */
-.details {
-  overflow: hidden;
-  max-height: 0;
-  background: #f0f8ff;
-  padding: 0 15px;
-  margin-top: 10px;
-  transition: max-height 0.5s ease;
-}
-
-/* Other previous styles for badges, clickable, filters stay the same */
-
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: linear-gradient(to right, #2575fc, #6a11cb);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Footer */
+footer {
   text-align: center;
+  padding: 20px;
+  background: #eee;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.hero .button {
-  background: white;
-  color: #2575fc;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.hero .button:hover {
-  background: #f0f0f0;
-}
-
-/* About Section */
-.about {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.about h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.about p {
-  max-width: 700px;
-  margin: 0 auto 20px;
-  font-size: 1.1rem;
-}
-
-
-/* Resume Sections */
-.resume-section {
-  margin-bottom: 60px;
-}
-
-/* General for Section Headers */
-.resume-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  text-align: left;
-  display: flex;
-  align-items: left;
-  gap: 10px;
-}
-
-/* Specific colors */
-#education-section h2 {
-  color: #3498db; /* Blue for Education */
-}
-
-#publications-section h2 {
-  color: #2ecc71; /* Green for Publications */
-}
-
-#conferences-section h2 {
-  color: #9b59b6; /* Purple for Conferences */
-}
-
-
-
-
