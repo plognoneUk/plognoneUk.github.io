@@ -18,29 +18,50 @@
 <section>
   <h1>My Resume</h1>
 
-  <h2>Education</h2>
-  <ul class="list">
-    <li><strong>PhD in Optical Communications</strong> – [Your University], [Year]</li>
-    <li><strong>Master's Degree in [Your Master Program]</strong> – [Your University], [Year]</li>
-    <li><strong>Bachelor's Degree in [Your Bachelor Program]</strong> – [Your University], [Year]</li>
-  </ul>
+  <div class="timeline">
 
-  <h2>Publications</h2>
-  <ul class="list">
-    <li><strong>"[Title of Paper 1]"</strong> – [Journal Name], [Year]</li>
-    <li><strong>"[Title of Paper 2]"</strong> – [Journal Name], [Year]</li>
-    <!-- Add more if you want -->
-  </ul>
+    <h2>Education</h2>
+    <div class="timeline-item">
+      <span class="badge education">PhD</span>
+      <h3>PhD in Optical Communications – [Your University] (202X)</h3>
+      <p>Focus on satellite optical links, adaptive optics, and turbulence mitigation.</p>
+    </div>
 
-  <h2>Conferences</h2>
-  <ul class="list">
-    <li><strong>[Conference Name]</strong> – Presented "[Talk Title]" – [Year]</li>
-    <li><strong>[Conference Name]</strong> – Attended – [Year]</li>
-    <!-- Add more if you want -->
-  </ul>
+    <div class="timeline-item">
+      <span class="badge education">Master</span>
+      <h3>Master's Degree in [Your Program] – [Your University] (202X)</h3>
+      <p>Specialization in telecommunications and photonics systems.</p>
+    </div>
 
-  <h2>Download Resume</h2>
-  <p>You can also download my full resume below.</p>
+    <h2>Publications</h2>
+    <div class="timeline-item">
+      <span class="badge journal">Journal</span>
+      <h3 class="clickable" onclick="toggleDetails('paper1')">"[Title of Paper 1]" – [Journal Name] (202X)</h3>
+      <div id="paper1" class="details">
+        <p>This paper addresses [short description of topic].</p>
+        <a href="link-to-paper-1.pdf" target="_blank">Read the paper ➔</a>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="badge journal">Conference</span>
+      <h3 class="clickable" onclick="toggleDetails('paper2')">"[Title of Paper 2]" – [Conference Name] (202X)</h3>
+      <div id="paper2" class="details">
+        <p>This talk presented advancements on [short description].</p>
+        <a href="link-to-paper-2.pdf" target="_blank">View presentation ➔</a>
+      </div>
+    </div>
+
+    <h2>Conferences</h2>
+    <div class="timeline-item">
+      <span class="badge conference">Conference</span>
+      <h3>[Conference Name] – Presented "[Talk Title]" (202X)</h3>
+      <p>Topic: [short description about the talk].</p>
+    </div>
+
+  </div>
+
+  <h2>Download Full Resume</h2>
   <a href="your-resume-link.pdf" class="button" download>Download Resume</a>
 
 </section>
@@ -48,6 +69,17 @@
 <footer>
   © 2025 Perrine Lognone
 </footer>
+
+<script>
+function toggleDetails(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 
 </body>
 </html>
