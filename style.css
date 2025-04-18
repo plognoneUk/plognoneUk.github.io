@@ -1,199 +1,217 @@
-/* General styles */
+/* Reset some basics */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #f7f7f7;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f9f9f9;
   color: #333;
 }
 
-header {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  padding: 20px 0;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-nav ul {
-  list-style: none;
+/* Navigation Bar */
+nav {
+  background: #2575fc;
+  padding: 15px 30px;
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 0;
+  gap: 30px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+nav a {
   color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: #f0f0f0;
 }
 
-main {
-  padding: 40px;
+/* General Section Styling */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Home Page Styles */
-.home-container {
+h1, h2, h3 {
+  color: #2575fc;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 100px 20px;
+  padding: 0 20px;
 }
 
-.home-container h1 {
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #333;
 }
 
-.home-container p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #555;
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
-.home-buttons {
-  display: flex;
-  justify-content: center;
+.hero .button {
+  background: white;
+  color: #2575fc;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .button:hover {
+  background: #f0f0f0;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Resume Cards */
+.resume-cards {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.home-buttons a {
-  padding: 15px 30px;
-  background: #6a11cb;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.home-buttons a:hover {
-  background: #2575fc;
-  transform: scale(1.05);
-}
-
-/* Filters section */
-.filters {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.filters button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  background: #ddd;
-  color: #333;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.filters button:hover {
-  transform: scale(1.05);
-}
-
-/* Specific button colors */
-.filters button.education-btn {
-  background: #3498db;
-  color: #fff;
-}
-
-.filters button.journal-btn {
-  background: #2ecc71;
-  color: #fff;
-}
-
-.filters button.conference-btn {
-  background: #9b59b6;
-  color: #fff;
-}
-
-/* Resume Sections */
-.resume-section {
-  margin-bottom: 60px;
-}
-
-.resume-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Specific header colors */
-#education-section h2 {
-  color: #3498db;
-}
-
-#publications-section h2 {
-  color: #2ecc71;
-}
-
-#conferences-section h2 {
-  color: #9b59b6;
-}
-
-/* Resume item cards */
 .resume-item {
   background: #ffffff;
   padding: 20px;
   border: 1px solid #ccc;
-  border-left: 6px solid #ccc;
+  border-left: 6px solid #2575fc;
   border-radius: 10px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
 .resume-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
 }
 
-/* Specific card left border colors */
-.resume-item.education {
-  border-left: 6px solid #3498db;
+.resume-item h3 {
+  margin-top: 0;
 }
 
-.resume-item.journal {
-  border-left: 6px solid #2ecc71;
-}
-
-.resume-item.conference {
-  border-left: 6px solid #9b59b6;
-}
-
-/* Hidden details */
-.details {
-  display: none;
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* Title style */
-.item-title {
-  font-size: 1.5rem;
-  color: #666;
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: white;
   margin-bottom: 10px;
-  cursor: pointer;
-  transition: color 0.3s;
 }
 
+.badge.education {
+  background: #3498db;
+}
+
+.badge.journal {
+  background: #2ecc71;
+}
+
+.badge.conference {
+  background: #9b59b6;
+}
+
+/* Expandable Paper Details */
+.details {
+  overflow: hidden;
+  max-height: 0;
+  background: #f0f8ff;
+  padding: 0 15px;
+  margin-top: 10px;
+  border-left: 3px solid #2575fc;
+  transition: max-height 0.5s ease;
+}
+
+.details p, .details a {
+  margin: 10px 0;
+}
+
+/* Clickable */
+.clickable {
+  cursor: pointer;
+  color: #2575fc;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
+/* Filters Buttons */
+.filters {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.filters button {
+  background: #2575fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filters button:hover {
+  background: #6a11cb;
+}
+
+/* General Buttons */
+.button {
+  background: #2575fc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #6a11cb;
+}
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #eee;
-  font-size: 0.9rem;
-  margin-top: 40px;
+  background: #2575fc;
+  color: white;
+  margin-top: 50px;
 }
