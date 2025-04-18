@@ -1,126 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perrine Lognone - Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | Perrine Lognone</title>
+  <link href="style.css" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="resume.html">Resume</a>
+  <a href="research.html">Research</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-    <section class="filters">
-      <button class="education-btn" onclick="filterItems('education')">Education</button>
-      <button class="journal-btn" onclick="filterItems('journal')">Papers</button>
-      <button class="conference-btn" onclick="filterItems('conference')">Conferences</button>
-    </section>
+<section>
+  <h1>My Resume</h1>
+  <p>You can download my resume below.</p>
+  <a href="your-resume-link.pdf" class="button" download>Download Resume</a>
+</section>
 
-    <section id="education-section" class="resume-section">
-      <h2>🎓 Education</h2>
-
-      <div class="resume-item education" onclick="toggleDetails(this)">
-        <h3 class="item-title">Ph.D. in Optical Communications</h3>
-        <div class="details">
-          <p>Thesis on Free Space Optical Links and Adaptive Optics, defended in 2024.</p>
-        </div>
-      </div>
-
-      <div class="resume-item education" onclick="toggleDetails(this)">
-        <h3 class="item-title">Master's in Photonics</h3>
-        <div class="details">
-          <p>Focus on optical systems, lasers, and optical communications. Graduated with honors.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications-section" class="resume-section">
-      <h2>📄 Papers</h2>
-
-      <div class="resume-item journal" onclick="toggleDetails(this)">
-        <h3 class="item-title">Paper 1: Atmospheric Turbulence Compensation</h3>
-        <div class="details">
-          <p>Developed novel algorithms for turbulence mitigation in ground-to-satellite optical links. <a href="#" target="_blank">Read paper</a></p>
-        </div>
-      </div>
-
-      <div class="resume-item journal" onclick="toggleDetails(this)">
-        <h3 class="item-title">Paper 2: Free Space Optics Optimization</h3>
-        <div class="details">
-          <p>Proposed new architectures for high throughput free-space optical communications. <a href="#" target="_blank">Read paper</a></p>
-        </div>
-      </div>
-
-    </section>
-
-    <section id="conferences-section" class="resume-section">
-      <h2>🎤 Conferences</h2>
-
-      <div class="resume-item conference" onclick="toggleDetails(this)">
-        <h3 class="item-title">SPIE Photonics Europe 2024</h3>
-        <div class="details">
-          <p>Presented advancements in adaptive optics for satellite communications.</p>
-        </div>
-      </div>
-
-      <div class="resume-item conference" onclick="toggleDetails(this)">
-        <h3 class="item-title">CLEO Europe 2023</h3>
-        <div class="details">
-          <p>Talk on innovations in turbulence-resilient optical communications.</p>
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Perrine Lognone</p>
-  </footer>
-
-  <script>
-    function filterItems(type) {
-      const allItems = document.querySelectorAll('.resume-item');
-      allItems.forEach(item => {
-        if (item.classList.contains(type)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-
-    function toggleDetails(card) {
-      const details = card.querySelector('.details');
-      const title = card.querySelector('.item-title');
-      if (details.style.display === 'block') {
-        details.style.display = 'none';
-        title.style.color = '#666'; // back to grey
-      } else {
-        details.style.display = 'block';
-        if (card.classList.contains('education')) {
-          title.style.color = '#3498db';
-        } else if (card.classList.contains('journal')) {
-          title.style.color = '#2ecc71';
-        } else if (card.classList.contains('conference')) {
-          title.style.color = '#9b59b6';
-        }
-      }
-    }
-  </script>
+<footer>
+  © 2025 Perrine Lognone
+</footer>
 
 </body>
-
 </html>
