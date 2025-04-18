@@ -21,48 +21,69 @@
   </header>
 
   <main>
+
     <section class="filters">
-      <button onclick="filterSelection('all')">All</button>
-      <button class="education-btn" onclick="filterSelection('education')">Education</button>
-      <button class="journal-btn" onclick="filterSelection('journal')">Publications</button>
-      <button class="conference-btn" onclick="filterSelection('conference')">Conferences</button>
+      <button class="education-btn" onclick="filterItems('education')">Education</button>
+      <button class="journal-btn" onclick="filterItems('journal')">Papers</button>
+      <button class="conference-btn" onclick="filterItems('conference')">Conferences</button>
     </section>
 
-    <section class="resume-section" id="education-section">
+    <section id="education-section" class="resume-section">
       <h2>🎓 Education</h2>
-      <div class="resume-item education">
-        <h3>Ph.D. in Satellite Optical Communications</h3>
-        <p>University of Example - 2020-2024</p>
+
+      <div class="resume-item education" onclick="toggleDetails(this)">
+        <h3 class="item-title">Ph.D. in Optical Communications</h3>
+        <div class="details">
+          <p>Thesis on Free Space Optical Links and Adaptive Optics, defended in 2024.</p>
+        </div>
       </div>
-      <div class="resume-item education">
-        <h3>Master in Optical Engineering</h3>
-        <p>University of Example - 2018-2020</p>
+
+      <div class="resume-item education" onclick="toggleDetails(this)">
+        <h3 class="item-title">Master's in Photonics</h3>
+        <div class="details">
+          <p>Focus on optical systems, lasers, and optical communications. Graduated with honors.</p>
+        </div>
       </div>
     </section>
 
-    <section class="resume-section" id="publications-section">
-      <h2>📄 Publications</h2>
-      <div class="resume-item journal">
-        <h3>Article Title 1</h3>
-        <p>Journal Name, 2023 - <a href="#">Learn more</a></p>
+    <section id="publications-section" class="resume-section">
+      <h2>📄 Papers</h2>
+
+      <div class="resume-item journal" onclick="toggleDetails(this)">
+        <h3 class="item-title">Paper 1: Atmospheric Turbulence Compensation</h3>
+        <div class="details">
+          <p>Developed novel algorithms for turbulence mitigation in ground-to-satellite optical links. <a href="#" target="_blank">Read paper</a></p>
+        </div>
       </div>
-      <div class="resume-item journal">
-        <h3>Article Title 2</h3>
-        <p>Journal Name, 2022 - <a href="#">Learn more</a></p>
+
+      <div class="resume-item journal" onclick="toggleDetails(this)">
+        <h3 class="item-title">Paper 2: Free Space Optics Optimization</h3>
+        <div class="details">
+          <p>Proposed new architectures for high throughput free-space optical communications. <a href="#" target="_blank">Read paper</a></p>
+        </div>
       </div>
+
     </section>
 
-    <section class="resume-section" id="conferences-section">
+    <section id="conferences-section" class="resume-section">
       <h2>🎤 Conferences</h2>
-      <div class="resume-item conference">
-        <h3>Conference Talk 1</h3>
-        <p>Conference Name, 2023 - <a href="#">Details</a></p>
+
+      <div class="resume-item conference" onclick="toggleDetails(this)">
+        <h3 class="item-title">SPIE Photonics Europe 2024</h3>
+        <div class="details">
+          <p>Presented advancements in adaptive optics for satellite communications.</p>
+        </div>
       </div>
-      <div class="resume-item conference">
-        <h3>Conference Talk 2</h3>
-        <p>Conference Name, 2022 - <a href="#">Details</a></p>
+
+      <div class="resume-item conference" onclick="toggleDetails(this)">
+        <h3 class="item-title">CLEO Europe 2023</h3>
+        <div class="details">
+          <p>Talk on innovations in turbulence-resilient optical communications.</p>
+        </div>
       </div>
+
     </section>
+
   </main>
 
   <footer>
@@ -70,14 +91,36 @@
   </footer>
 
   <script>
-    function filterSelection(category) {
-      var items = document.getElementsByClassName("resume-item");
-      if (category === "all") category = "";
-      for (var i = 0; i < items.length; i++) {
-        items[i].style.display = items[i].className.indexOf(category) > -1 ? "block" : "none";
+    function filterItems(type) {
+      const allItems = document.querySelectorAll('.resume-item');
+      allItems.forEach(item => {
+        if (item.classList.contains(type)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleDetails(card) {
+      const details = card.querySelector('.details');
+      const title = card.querySelector('.item-title');
+      if (details.style.display === 'block') {
+        details.style.display = 'none';
+        title.style.color = '#666'; // back to grey
+      } else {
+        details.style.display = 'block';
+        if (card.classList.contains('education')) {
+          title.style.color = '#3498db';
+        } else if (card.classList.contains('journal')) {
+          title.style.color = '#2ecc71';
+        } else if (card.classList.contains('conference')) {
+          title.style.color = '#9b59b6';
+        }
       }
     }
   </script>
+
 </body>
 
 </html>
