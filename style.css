@@ -148,3 +148,85 @@ footer {
   text-decoration: underline;
 }
 
+/* Timeline */
+.timeline {
+  border-left: 3px solid #2575fc;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-item::before {
+  content: " ";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #2575fc;
+  border-radius: 50%;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  background: #2575fc;
+  color: white;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.badge.education { background: #6a11cb; }
+.badge.journal { background: #00b894; }
+.badge.conference { background: #e17055; }
+
+/* Expandable details */
+.details {
+  overflow: hidden;
+  max-height: 0;
+  background: #f0f8ff;
+  padding: 0 15px;
+  border-left: 4px solid #2575fc;
+  margin-top: 10px;
+  transition: max-height 0.5s ease;
+}
+
+/* Clickable paper titles */
+.clickable {
+  cursor: pointer;
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
+/* Filter buttons */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters button {
+  background: #2575fc;
+  color: white;
+  border: none;
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filters button:hover {
+  background: #6a11cb;
+}
+
+
