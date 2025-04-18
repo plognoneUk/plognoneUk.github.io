@@ -222,9 +222,12 @@ footer {
 }
 
 .resume-section h2 {
-  font-size: 2rem;
+  font-size: 3rem; /* Bigger */
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left; /* Align left */
   color: #6a11cb;
+  display: flex;
+  align-items: left;
+  gap: 10px;
 }
 
