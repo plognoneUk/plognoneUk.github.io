@@ -38,6 +38,45 @@ main {
   padding: 40px;
 }
 
+/* Home Page Styles */
+.home-container {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-buttons a {
+  padding: 15px 30px;
+  background: #6a11cb;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.home-buttons a:hover {
+  background: #2575fc;
+  transform: scale(1.05);
+}
+
 /* Filters section */
 .filters {
   margin: 20px 0;
@@ -81,7 +120,6 @@ main {
   margin-bottom: 60px;
 }
 
-/* General header style */
 .resume-section h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
