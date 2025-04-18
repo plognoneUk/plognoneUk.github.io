@@ -176,7 +176,7 @@ h1, h2, h3 {
 /* Clickable */
 .clickable {
   cursor: pointer;
-  color: #00AEFF; /* Algolia Light Blue */
+  color: #050F2C; /* Algolia Dark Blue */
 }
 
 .clickable:hover {
